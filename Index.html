@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>SL CINEMA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader"><div class="loader-spinner"></div></div>
+
+    <div class="navbar">
+        <div class="logo">SL CINEMA</div>
+        <div>
+            <input type="text" id="search-box" placeholder="Search..." onkeyup="filter()">
+            <span style="cursor:pointer;" onclick="document.getElementById('search-box').classList.toggle('open')">🔍</span>
+        </div>
+    </div>
+
+    <div class="grid" id="movie-list"></div>
+
+    <div class="overlay" id="modal" onclick="closePopup()">
+        <div class="popup" onclick="event.stopPropagation()">
+            <img id="pop-img" style="width:100%; border-radius:10px;">
+            <h2 id="pop-title" style="font-size:18px;"></h2>
+            <a id="pop-link" href="#" class="btn-dl">DOWNLOAD</a>
+        </div>
+    </div>
+
+    <script src="Data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
